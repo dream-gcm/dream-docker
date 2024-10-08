@@ -3,15 +3,13 @@ spack:
     all:
       compiler: [gcc@11.4.0]
   specs:
-  - gmake
   - hdf5@1.14.3
-  - netcdf-c@4.9.2+mpi+parallel-netcdf
-  - netcdf-cxx4@4.3.1
   - netcdf-fortran
-  - openmpi@4.1.6
   - zlib-ng@2.1.4
   - git
   - ncview
+  - py-jupyterlab-server
+  - py-pip
   concretizer:
     unify: true
   config:
