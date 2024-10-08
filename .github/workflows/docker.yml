@@ -1,8 +1,9 @@
 name: Periodic Docker build
 
 on:
-  # Build the Docker container whenever commits are pushed to an open PR (under conditions defined below)
-  pull_request:
+  push:
+    branches:
+      - main
 
   # Build the Docker container at 00:00 on the first day of every 3 months
   schedule:
