@@ -32,7 +32,6 @@ FROM ubuntu:22.04
 # Copy necessary files from the builder stage
 COPY --from=builder /opt/spack-environment /opt/spack-environment
 COPY --from=builder /opt/software /opt/software
-COPY --from=builder /decomp /decomp
 COPY --from=builder /usr /usr
 # paths.view is a symlink, so copy the parent to avoid dereferencing and duplicating it
 COPY --from=builder /opt/views /opt/views
