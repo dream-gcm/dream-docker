@@ -18,12 +18,12 @@ jobs:
       packages: write
     steps:
       - name: Checkout the repo
-        uses: docker/actions/checkout@v4
+        uses: actions/checkout@v4  # Use the correct checkout action
 
       - name: Setup Docker buildx
         uses: docker/setup-buildx-action@v3
         with:
-          driver-opts: network=host
+          driver-opts: network=host  # Optional, consider if you really need this
 
       - name: Log into GitHub Container Repository
         uses: docker/login-action@v3
@@ -35,10 +35,12 @@ jobs:
       - name: Build multi-platform image and push to ghcr
         uses: docker/build-push-action@v5
         with:
-          platforms: linux/amd64,linux/arm64  # Adding multiple platforms
+          platforms: linux/amd64,linux/arm64  # Specifying multiple platforms
           push: true
           no-cache: true
-          file: Dockerfiles/Dockerfile.devenv
+          context: ./Dockerfiles  # Set the correct build context
+          file: Dockerfile         # Reference Dockerfile correctly
           tags: ghcr.io/dream-gcm/dreamgcm-env:latest
+
 
 
