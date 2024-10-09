@@ -7,7 +7,7 @@ spack:
   - netcdf-fortran
   - zlib-ng@2.1.4
   - git
-  - vi
+  - vim
   - ncview
   - py-ipykernel
   - py-notebook
