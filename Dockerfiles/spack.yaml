@@ -12,9 +12,9 @@ spack:
   - py-ipykernel
   - py-notebook
   - py-jupyterlab
-  - py-numpy                 # Add this to make NumPy available
-  - py-matplotlib            # Add this for Matplotlib
-  - py-scipy                 # Add this for SciPy
+  - py-numpy                
+  - py-matplotlib            
+  - py-scipy                
   - py-cartopy
   - py-netcdf4
   - py-pandas
