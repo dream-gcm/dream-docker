@@ -37,7 +37,7 @@ COPY --from=builder /usr /usr
 COPY --from=builder /opt/views /opt/views
 
 # Copy the entrypoint script into the container
-COPY entrypoint.sh /entrypoint.sh
+COPY Dockerfiles/entrypoint.sh /entrypoint.sh
 
 # Make the script executable
 RUN chmod +x /entrypoint.sh && \
