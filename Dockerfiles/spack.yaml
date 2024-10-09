@@ -11,7 +11,13 @@ spack:
   - ncview
   - py-ipykernel
   - py-notebook
-  - py-jupyterlab-server
+  - py-jupyterlab
+  - py-numpy                 # Add this to make NumPy available
+  - py-matplotlib            # Add this for Matplotlib
+  - py-scipy                 # Add this for SciPy
+  - py-cartopy
+  - py-netcdf4
+  - py-pandas
   - py-pip
   concretizer:
     unify: true
