@@ -19,17 +19,10 @@ COPY --from=builder /opt/software /opt/software
 COPY --from=builder /usr /usr
 COPY --from=builder /opt/views /opt/views
 
-# Create entrypoint script
-RUN { \
-      echo '#!/bin/sh'; \
-      echo '. /opt/spack/share/spack/setup-env.sh'; \          # Set up Spack environment
-      echo '. /opt/spack-environment/activate.sh'; \           # Activate the Spack environment
-      echo 'jupyter lab --ip=0.0.0.0 --no-browser --allow-root &'; \  # Start Jupyter Lab in the background
-      echo 'exec "$@"'; \
-    } > /entrypoint.sh \
-    && chmod a+x /entrypoint.sh \
-    && ln -s /opt/views/view /opt/view
+# Copy entrypoint script
+COPY Dockerfiles/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh  
 
 # Set entrypoint and default command
-ENTRYPOINT [ "/entrypoint.sh" ]
-CMD [ "/bin/bash" ]
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/bin/bash"]
