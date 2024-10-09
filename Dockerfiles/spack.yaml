@@ -7,7 +7,10 @@ spack:
   - netcdf-fortran
   - zlib-ng@2.1.4
   - git
+  - vi
   - ncview
+  - py-ipykernel
+  - py-notebook
   - py-jupyterlab-server
   - py-pip
   concretizer:
