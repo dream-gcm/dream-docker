@@ -37,17 +37,20 @@ COPY --from=builder /usr /usr
 COPY --from=builder /opt/views /opt/views
 
 # Create entrypoint script to activate Spack, start Jupyter Lab, and allow passed commands
-RUN { \
-      echo '#!/bin/sh'; \
-      echo '. /opt/spack-environment/activate.sh'; \                    # Activate Spack environment
-      echo 'jupyter lab --ip=0.0.0.0 --no-browser --allow-root &'; \     # Start Jupyter Lab in the background
-      echo 'exec "$@"'; \                                                # Run any additional commands passed at runtime
-    } > /entrypoint.sh \
-    && chmod a+x /entrypoint.sh \
-    && ln -s /opt/views/view /opt/view \                                 # Create symlink
-    && apt update \
-    && apt install -y --no-install-recommends ca-certificates python3-dev python3-netcdf4 \
-    && rm -rf /var/lib/apt/lists/*
+RUN cat << 'EOF' > /entrypoint.sh
+#!/bin/sh
+. /opt/spack-environment/activate.sh  # Activate Spack environment
+jupyter lab --ip=0.0.0.0 --no-browser --allow-root &  # Start Jupyter Lab in the background
+exec "$@"  # Run any additional commands passed at runtime
+EOF
+
+# Make the script executable
+RUN chmod a+x /entrypoint.sh && \
+    ln -s /opt/views/view /opt/view && \
+    apt update && \
+    apt install -y --no-install-recommends ca-certificates python3-dev python3-netcdf4 && \
+    rm -rf /var/lib/apt/lists/*
+
 
 
 
