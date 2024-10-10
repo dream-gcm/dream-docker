@@ -1,5 +1,5 @@
 # Base image with Jupyter and common libraries
-FROM jupyter/scipy-notebook:latest
+FROM jupyter/minimal-notebook:latest
 
 # Install Spack and additional packages
 RUN apt-get update && apt-get install -y \
