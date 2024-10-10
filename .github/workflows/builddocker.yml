@@ -26,5 +26,5 @@ jobs:
         with:
           push: true
           no-cache: true
-          file: Dockerfiles/Dockerfile
+          file: Dockerfiles/Dockerfile.devenv
           tags: ghcr.io/dream-gcm/dreamgcm-env:latest
