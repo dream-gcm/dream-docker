@@ -35,7 +35,7 @@ jobs:
       - name: Build multi-platform image and push to ghcr
         uses: docker/build-push-action@v5
         with:
-          platforms: linux/amd64,linux/arm64  # Adding multiple platforms
+          platforms: linux/arm64  # Mac M1/M2 chips only
           push: true
           no-cache: true
           file: Dockerfiles/Dockerfile.devenv
