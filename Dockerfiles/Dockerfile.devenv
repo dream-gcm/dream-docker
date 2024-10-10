@@ -1,11 +1,6 @@
 # Base image with Jupyter and common libraries
 FROM jupyter/minimal-notebook:latest
 
-# Install Spack and additional packages
-RUN apt-get update && apt-get install -y \
-    git build-essential curl vim && \
-    rm -rf /var/lib/apt/lists/*
-
 # Install Spack
 RUN git clone https://github.com/spack/spack.git /opt/spack && \
     . /opt/spack/share/spack/setup-env.sh && \
