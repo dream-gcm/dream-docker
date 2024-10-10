@@ -6,9 +6,7 @@ FROM jupyter/minimal-notebook:latest
 USER root
 
 # Update the package list and install additional tools
-RUN apt-get update && \
-    apt-get install -y git build-essential curl vim && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get install -y git build-essential curl vim 
 
 # Install Spack
 RUN git clone https://github.com/spack/spack.git /opt/spack && \
