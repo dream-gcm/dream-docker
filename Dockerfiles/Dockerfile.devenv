@@ -5,9 +5,6 @@ FROM jupyter/minimal-notebook:latest
 # Switch to root user
 USER root
 
-# Update the package list and install additional tools
-RUN apt-get install -y git build-essential curl vim 
-
 # Install Spack
 RUN git clone https://github.com/spack/spack.git /opt/spack && \
     . /opt/spack/share/spack/setup-env.sh && \
