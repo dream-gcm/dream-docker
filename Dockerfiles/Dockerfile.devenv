@@ -1,7 +1,7 @@
-# Use the official Jupyter Notebook base image
-FROM jupyter/scipy-notebook:latest
+# Start from the Jupyter base notebook image
+FROM jupyter/base-notebook:latest
 
-# Switch to root to install system dependencies
+# Switch to root to install system-level dependencies
 USER root
 
 # Install system dependencies
@@ -9,30 +9,20 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gfortran \
     libhdf5-dev \
     libnetcdf-dev \
-    netcdf-bin \
     libnetcdff-dev \
+    netcdf-bin \
     vim \
-    ncview \
     && rm -rf /var/lib/apt/lists/*
 
+# Switch back to jovyan user (the default user in Jupyter images)
+USER ${NB_UID}
 
-# Switch back to the default user (jovyan)
-USER ${NB_USER}
+# Upgrade pip, JupyterLab and install Python packages
+RUN pip install --upgrade pip jupyterlab \
+    && pip install numpy netCDF4 cartopy matplotlib pandas scipy h5py
 
-# Install Python packages using pip
-RUN pip install --no-cache-dir \
-    cartopy \
-    numpy \
-    netCDF4 \
-    pandas \
-    matplotlib \
-    scipy
-
-# Set the working directory for the container
-WORKDIR /home/jovyan/work
-
-# Expose Jupyter port
+# Expose the JupyterLab port
 EXPOSE 8888
 
-# Set the default command to start Jupyter Lab
+# Set the default command to start JupyterLab
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--no-browser", "--allow-root"]
