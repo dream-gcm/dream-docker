@@ -17,9 +17,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Switch back to jovyan user (the default user in Jupyter images)
 USER ${NB_UID}
 
-# Upgrade pip, JupyterLab and install Python packages
-RUN pip install --upgrade pip jupyterlab \
-    && pip install numpy netCDF4 cartopy matplotlib pandas scipy h5py
+# Install Python packages using pip
+RUN pip install --no-cache-dir \
+    cartopy \
+    numpy \
+    netCDF4 \
+    pandas \
+    matplotlib \
+    scipy
 
 # Expose the JupyterLab port
 EXPOSE 8888
