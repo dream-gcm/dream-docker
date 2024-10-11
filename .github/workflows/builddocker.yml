@@ -29,5 +29,5 @@ jobs:
           context: .
           push: true
           platforms: linux/amd64,linux/arm64  # Enable multi-platform builds
-          file: Dockerfiles/Dockerfile         # Path to your Dockerfile
+          file: Dockerfiles/Dockerfile.devenv         # Path to your Dockerfile
           tags: ghcr.io/dream-gcm/dreamgcm-env:latest
