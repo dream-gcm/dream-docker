@@ -1,5 +1,5 @@
 # Start from the Jupyter base notebook image
-FROM jupyter/base-notebook:latest
+FROM quay.io/jupyter/scipy-notebook:2024-10-07
 
 # Switch to root to install system-level dependencies
 USER root
