@@ -1,42 +1,30 @@
-# Build stage with Spack pre-installed and ready to be used
-FROM spack/ubuntu-jammy:0.21 AS builder
+# Use the official Jupyter Notebook base image
+FROM jupyter/scipy-notebook:latest
 
-# Install software from spack_devenv.yaml
-RUN mkdir /opt/spack-environment
-COPY Dockerfiles/spack.yaml /opt/spack-environment/spack.yaml
-RUN cd /opt/spack-environment \
-    && spack env activate . \
-    && spack install --fail-fast \
-    && spack gc -y
-
-# Modifications to the environment that are necessary to run
-RUN cd /opt/spack-environment && \
-    spack env activate --sh -d . > activate.sh
-
-# Bare OS image to run the installed executables
-FROM ubuntu:22.04
-
-# Copy necessary files from the builder stage
-COPY --from=builder /opt/spack-environment /opt/spack-environment
-COPY --from=builder /opt/software /opt/software
-COPY --from=builder /usr /usr
-# paths.view is a symlink, so copy the parent to avoid dereferencing and duplicating it
-COPY --from=builder /opt/views /opt/views
-
-# Create entrypoint script
-RUN { \
-      echo '#!/bin/sh'; \
-      echo '. /opt/spack-environment/activate.sh'; \
-      echo 'exec "$@"'; \
-    } > /entrypoint.sh \
-    && chmod a+x /entrypoint.sh \
-    && ln -s /opt/views/view /opt/view \
-    && apt update \
-    && apt install -y --no-install-recommends ca-certificates python3-dev python3-netcdf4 \
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gfortran \
+    libhdf5-dev \
+    libnetcdf-dev \
+    netcdf-bin \
+    libnetcdff-dev \
+    vim \
     && rm -rf /var/lib/apt/lists/*
 
-# Set default entrypoint
-COPY Dockerfiles/entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+# Install Python packages using pip
+RUN pip install --no-cache-dir \
+    cartopy \
+    numpy \
+    netCDF4 \
+    pandas \
+    matplotlib \
+    scipy
+
+# Set the working directory for the container
+WORKDIR /home/jovyan/work
+
+# Expose Jupyter port
+EXPOSE 8888
+
+# Set the default command to start Jupyter Lab
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--no-browser", "--allow-root"]
