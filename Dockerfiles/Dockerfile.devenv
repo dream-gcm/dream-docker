@@ -24,7 +24,9 @@ RUN pip install --no-cache-dir \
     netCDF4 \
     pandas \
     matplotlib \
-    scipy
+    scipy \
+    Pillow \
+    ffmpeg-python
 
 # Expose the JupyterLab port
 EXPOSE 8888
