@@ -25,6 +25,7 @@ RUN pip install --no-cache-dir \
     pandas \
     matplotlib \
     scipy \
+    xarray \
     Pillow \
     ffmpeg-python
 
