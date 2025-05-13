@@ -20,7 +20,7 @@
 * You'll need to be ROOT on your computer to be able to install the Docker Desktop app (instructions below), or else you'll need to already have Docker and git commands installed on your machine before coming to the workshop.
 * MAC users: not absolutely necessary but highly recommanded : should have the Command Line Tools installed (if not yet installed,   `xcode-select --install` then `sudo xcodebuild -license accept` in a terminal should do it. More info on https://mac.install.guide/commandlinetools/4  if needed).
 
-# 1. Download the DREAM model code an tools
+# 1. Download the DREAM model code and tools
 _[These steps have to be done once for all.]_
 
 * 1.1 Create a directory where you will work during the workshop: `mkdir MY-DREAM-WORKSHOP`
