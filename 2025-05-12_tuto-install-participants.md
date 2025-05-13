@@ -82,7 +82,7 @@ The long downloading  has to be done only once for all. Then it  will be kept  o
 _[These steps have to be done each time you want to use the DREAM model.]_
 
 * 4.1 On your local machine, open the Docker Desktop app if not already open.
-* 4.2 Then in a terminal, run the docker command below, after editing  the path `your-local-path-to-MY-DREAM-WORKSHOP/` to your workshop directory.
+* 4.2 Then in a terminal, run the docker command below, after editing  the path `your-local-path-to-MY-DREAM-WORKSHOP/` to your own workshop directory.
 ```
 docker run -it --rm -p 8888:8888 -v your-local-path-to-MY-DREAM-WORKSHOP/:/home/jovyan/work ghcr.io/dream-gcm/dreamgcm-env:latest jupyter lab --ip=0.0.0.0 --no-browser --allow-root
 ```
