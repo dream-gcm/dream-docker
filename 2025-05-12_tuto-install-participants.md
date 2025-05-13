@@ -71,9 +71,10 @@ _[These steps have to be done once for all.]_
 
 * 3.1 Launch the Docker Desktop app (double-click on the icon). It opens a window that you can then close. Docker will now run in the background and the Docker commands are now available in your terminal.
 * 3.2 In a terminal, run the docker command below to download the DREAM Docker image on your local machine. It might take a while to download depending on your internet connexion.
-```
-docker pull  ghcr.io/dream-gcm/dreamgcm-env:latest
-```
+
+  ```
+  docker pull  ghcr.io/dream-gcm/dreamgcm-env:latest
+  ```
 The long downloading  has to be done only once for all. Then it  will be kept  on your local machine and you can re-activate it anytime by running the Docker app and the Docker command in the terminal as explained below.
 
 
