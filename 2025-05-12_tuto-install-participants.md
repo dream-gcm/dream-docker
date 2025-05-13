@@ -47,7 +47,7 @@ _[These steps have to be done once for all.]_
   </details>
 
   <details>
-  <summary>Option 2: CLICK HERE to download by clicking on the GitHub webpage</summary>
+  <summary>Option B: CLICK HERE to download by clicking on the GitHub webpage</summary>
       
     * Because the DREAM code repository is private you will need to be logged in to [https://github.com/](https://github.com/) before going to the page below and clicking download.
     * Once logged in, go to [https://github.com/dream-gcm/DREAM/tree/dev-in-Docker](https://github.com/dream-gcm/DREAM/tree/dev-in-Docker)
