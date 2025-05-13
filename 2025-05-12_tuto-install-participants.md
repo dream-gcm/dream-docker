@@ -48,6 +48,7 @@ mkdir DREAM-WORKSHOP
 
   <details>
   <summary>Option 2: Download by clicking on the GitHub webpage</summary>
+      
     * Because the DREAM code repository is private you will need to be logged in to [https://github.com/](https://github.com/) before going to the page below and clicking download.
     * Once loged in, go to [https://github.com/dream-gcm/DREAM/tree/dev-in-Docker](https://github.com/dream-gcm/DREAM/tree/dev-in-Docker)
     * Click on the green CODE button and then 'Download zip' in the menu. 
