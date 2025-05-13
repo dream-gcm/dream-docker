@@ -20,11 +20,8 @@ Stephanie Leroux
 # 1. Download the DREAM model code an tools
 _[These steps have to be done once for all.]_
 
-* Create a directory where you will work during the workshop:
-```
-# create directory
-mkdir DREAM-WORKSHOP
-```
+* Create a directory where you will work during the workshop: `mkdir MY-DREAM-WORKSHOP`
+
 
 * Download the model code from GitHub:
 
@@ -35,7 +32,7 @@ mkdir DREAM-WORKSHOP
 
     ```
     # Download the model code and plot tools in the workshop directory with git
-    cd DREAM-WORKSHOP
+    cd MY-DREAM-WORKSHOP
     git clone https://github.com/dream-gcm/DREAM.git
     git clone https://github.com/dream-gcm/dream-tools.git
     
