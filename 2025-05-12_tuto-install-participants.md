@@ -83,14 +83,16 @@ docker run -it --rm -p 8888:8888 -v your-local-path-to-MY-DREAM-WORKSHOP/:/home/
 ```
 You should now have some text printed in the terminal saying that a server is running.
 
-* But first, some explanation of what this command does:
+But first, some explanation of what this command does:
   * In this command, we tell Docker to run the Docker image “dreamgcm-env” from the GitHub website `ghcr.io/dream-gcm/dreamgcm-env` and inside the Docker,  run the JupyterLab  and   link port 8888 to the port inside the image to display the Jupyterlab.
   * **Importantly** we also link  the local directory on your machine where the DREAM code is (`your-local-path-to-MY-DREAM-WORKSHOP/`) to the virtual directory `/home/jovyan/work/` in the Docker image. Once in the Docker, you will work in `/home/jovyan/work/` but your actions will happen in `your-local-path-to-MY-DREAM-WORKSHOP/`.
-  *  Copy the link that printed in the terminal that looks like  http://127.0.0.1:8888/lab?token=…….  (But copy the entire link with the token with numbers)
-  *  Paste this link in your favourite browser. It should open a JupyterLab window like this:
-_TODO: Insert screenshot_ ![](Screenshot1.png)
-  *  Click on the “Terminal” icon to open a terminal (this terminal runs in the Docker, with its associated environment). There you can start working on the model as usual, and your environnement is already ready to work with Fortran, netcdf, and all that.
-  *  On the left, click on the “work” directory, then in DREAM directory, and you can see the files and subdirectories from the DREAM model code. You can open and edit those file within the JupyterLab too by clicking on them.
+
+*  Copy the link that printed in the terminal that looks like  http://127.0.0.1:8888/lab?token=…….  (But copy the entire link with the token with numbers)
+*  Paste this link in your favourite browser. It should open a JupyterLab window like this:
+_TODO: Insert screenshot_ ![screenshot1](./FIGSScreenshot1.png)
+
+*  Click on the “Terminal” icon to open a terminal (this terminal runs in the Docker, with its associated environment). There you can start working on the model as usual, and your environnement is already ready to work with Fortran, netcdf, and all that.
+*  On the left, click on the “work” directory, then in DREAM directory, and you can see the files and subdirectories from the DREAM model code. You can open and edit those file within the JupyterLab too by clicking on them.
 
 
 # 5 Close Docker 
