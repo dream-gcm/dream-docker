@@ -33,33 +33,35 @@ mkdir DREAM-WORKSHOP
 
   Because the DREAM code repository is private you will need to enter your GitHub ID and password when cloning.
 
+    ```
+    # Download the model code and plot tools in the workshop directory with git
+    cd DREAM-WORKSHOP
+    git clone https://github.com/dream-gcm/DREAM.git
+    git clone https://github.com/dream-gcm/dream-tools.git
+    
+    # In the code directory, switch to the branch `dev-in-Docker` developped specifically for the workshop.
+    cd DREAM
+    git checkout dev-in-Docker
+    ```
+
   </details>
 
   <details>
   <summary>Option 2: Do it by clicking on the GitHub webpage</summary>
-
-  Because the DREAM code repository is private you will need to be logged in to GitHub before going to the page and clicking download.
+    * Go to [https://github.com/dream-gcm/DREAM/tree/dev-in-Docker](https://github.com/dream-gcm/DREAM/tree/dev-in-Docker) and click on the green `CODE`button and then `Download zip` in the menu. 
+    * Save this zip file in your workshop directory and unzip it.
+    * Because the DREAM code repository is private you will need to be logged in to GitHub before going to the page and clicking download.
 
   </details>
 
 
-# Download the model code and plot tools in this new directory with git
-cd DREAM-latest-Docker
-git clone https://github.com/dream-gcm/DREAM.git
-git clone https://github.com/dream-gcm/dream-tools.git
 
-# In the code directory, switch to my dev branch where the scripts have been prepared to work easily within the DOcker
-cd DREAM
-git checkout dev-in-Docker
-```
-
-
-# 1 Install the Docker Desktop app 
+# 2 Install the Docker Desktop app 
 _[These steps have to be done once for all.]_
 * Go to the website: [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop) and click on `DOWNLOAD the DOCKER APP`.
 * There is a version for Mac OS, Linux and Windows plateforms (however we won't be able to fully support WIndows users. You'll be on your own). 
 
-# 2 Load the DREAM Docker image 
+# 3 Load the DREAM Docker image 
 _[These steps have to be done once for all.]_
 * Launch the Docker Desktop app. It opens a window that you can then close. Docker will now run in the background and the Docker commands are now available in your terminal.
 * In a terminal, run the docker command below to download the DREAM Docker image on your local machine. It might take a while to download depending on your internet connexion.
