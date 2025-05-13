@@ -4,7 +4,7 @@ Stephanie Leroux
 
 **Purpose:** 
 * __This tutorial provides  instructions to install a ready-to-use environment to run the DREAM model__.
-* This environment (including fortran compiler, netcdf libraries, python  and all what you need) is provided throught a Docker container that you will run on your own machine. Note that this Docker image is in open acces but  does not contain the model code itself, that we will  download from the DREAM github (_authorized members only_ - if you're not yet pârt of the group, please contact us). 
+* This environment (including fortran compiler, netcdf libraries, python  and all what you need) is provided throught a Docker container that you will run on your own machine. Note that the Docker image is in open acces but  does not contain the model code itself, that we will  download from the DREAM github (_authorized members only_ - if you're not yet pârt of the group, please contact us). 
 * This tutorial takes you step-by-step to:
     1. download the DREAM model code and tools needed for this workshop, 
     2. download the Docker Desktop app and install install it,
@@ -26,24 +26,22 @@ _[These steps have to be done once for all.]_
 mkdir DREAM-WORKSHOP
 ```
 
-* Download the model code from github:
+* Download the model code from GitHub:
 
-<details>
-<summary> Option 1: Do it in the terminal with git</summary>
+  <details>
+  <summary>Option 1: Do it in the terminal with git</summary>
 
-Because the DREAM code repository is private you will need to enter your github id and password when cloning.
+  Because the DREAM code repository is private you will need to enter your GitHub ID and password when cloning.
 
-</details>
+  </details>
 
-<details>
-<summary> Option 1: Do it by clicking on the github webpage</summary>
+  <details>
+  <summary>Option 2: Do it by clicking on the GitHub webpage</summary>
 
-Because the DREAM code repository is private you will need to be logged in to  github before going to the page and clicking download.
+  Because the DREAM code repository is private you will need to be logged in to GitHub before going to the page and clicking download.
 
-</details>
+  </details>
 
-
-```
 
 # Download the model code and plot tools in this new directory with git
 cd DREAM-latest-Docker
