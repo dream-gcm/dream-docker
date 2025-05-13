@@ -3,19 +3,63 @@ Stephanie Leroux
 (lastest update 2025-05-12)
 
 **Purpose:** 
-* This is a tutorial with instructions to download the Docker Desktop app, install it, and get the available Docker image that  provides an environment that is ready for the DREAM model to work. 
-* Note that this Docker image is in open acces but  does not contain the model code itself, that should be downloaded through git (see the instructions below) if you are an authorized member of the group (otherwise please contact us). 
-
-_Prerequisites_: 
-* you'll need to know your github identifiers
-* you'll need  to a member of the dream-gcm github organization (send us your github login so that you can be added as a member)
-* Either you already have Docker and git installed on your computer, or you need to be ROOT to install them following the instructions below. If you're not ROOT and don't have Docker and git installed, please contact your IT administrator before the workshop to have them installed for you.
+* __This tutorial provides  instructions to install a ready-to-use environment to run the DREAM model__.
+* This environment (including fortran compiler, netcdf libraries, python  and all what you need) is provided throught a Docker container that you will run on your own machine. Note that this Docker image is in open acces but  does not contain the model code itself, that we will  download from the DREAM github (_authorized members only_ - if you're not yet pârt of the group, please contact us). 
+* This tutorial takes you step-by-step to:
+    1. download the DREAM model code and tools needed for this workshop, 
+    2. download the Docker Desktop app and install install it,
+    2. get the  Docker image that  provides a ready-to-use environment for the DREAM model,
+    3. run your Docker container and find the model code in there. 
+ 
+**Prerequisites:** 
+* You'll need to know your github identifiers
+* You'll need  to be a member of the dream-gcm github organization (if not a member aleady, send us your github login so that we can  add you in the group)
+* You'll need to be ROOT on your computer to be able to install the Docker Desktop app (instructions below), or else you'll need to already have Docker and git commands installed on your machine before coming to the workshop.
 * MAC users: not absolutely necessary but highly recommanded : should have the Command Line Tools installed (if not yet installed,   `xcode-select --install` then `sudo xcodebuild -license accept` in a terminal should do it. More info on https://mac.install.guide/commandlinetools/4  if needed).
+
+# 1. Download the DREAM model code an tools
+_[These steps have to be done once for all.]_
+
+* Create a directory where you will work during the workshop:
+```
+# create directory
+mkdir DREAM-WORKSHOP
+```
+
+* Download the model code from github:
+
+<details>
+<summary> Option 1: Do it in the terminal with git</summary>
+
+Because the DREAM code repository is private you will need to enter your github id and password when cloning.
+
+</details>
+
+<details>
+<summary> Option 1: Do it by clicking on the github webpage</summary>
+
+Because the DREAM code repository is private you will need to be logged in to  github before going to the page and clicking download.
+
+</details>
+
+
+```
+
+# Download the model code and plot tools in this new directory with git
+cd DREAM-latest-Docker
+git clone https://github.com/dream-gcm/DREAM.git
+git clone https://github.com/dream-gcm/dream-tools.git
+
+# In the code directory, switch to my dev branch where the scripts have been prepared to work easily within the DOcker
+cd DREAM
+git checkout dev-in-Docker
+```
+
 
 # 1 Install the Docker Desktop app 
 _[These steps have to be done once for all.]_
-* https://www.docker.com/products/docker-desktop/
-* There is a version for Mac OS, Linux and Windows plateform
+* Go to the website: [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop) and click on `DOWNLOAD the DOCKER APP`.
+* There is a version for Mac OS, Linux and Windows plateforms (however we won't be able to fully support WIndows users. You'll be on your own). 
 
 # 2 Load the DREAM Docker image 
 _[These steps have to be done once for all.]_
@@ -26,23 +70,7 @@ docker pull  ghcr.io/dream-gcm/dreamgcm-env:latest
 ```
 The long downloading  has to be done only once for all. Then it  will be kept  on your local machine and you can re-activate it anytime by running the Docker app and the Docker command in the terminal as explained below.
 
-# 3. Download the DREAM model code an tools
-_[These steps have to be done once for all.]_
 
-To avoid messing up with your local install of DREAM (if you already have one) i suggest that you create a new directory `DREAM-latest-Docker` where you will download the model code from scratch as if you were a workshop attendant. Because the DREAM code repository is private you will need to enter your github id and password when cloning.
-```
-# create directory
-mkdir DREAM-latest-Docker
-
-# download the model code and plot tools in this new directory with git
-cd DREAM-latest-Docker
-git clone https://github.com/dream-gcm/DREAM.git
-git clone https://github.com/dream-gcm/dream-tools.git
-
-# In the code directory, switch to my dev branch where the scripts have been prepared to work easily within the DOcker
-cd DREAM
-git checkout dev-in-Docker
-```
 
 # 4. Run Docker
 _[These steps have to be done each time you want to use the DREAM model.]_
