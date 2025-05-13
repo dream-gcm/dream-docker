@@ -4,12 +4,14 @@
 **Purpose:** 
 * __This tutorial provides  instructions to install a ready-to-use environment to run the DREAM model__.
 * This environment (including fortran compiler, netcdf libraries, python  and all what you need) is provided throught a Docker container that you will run on your own machine. Note that the Docker image is in open acces but  does not contain the model code itself, that we will  download from the DREAM github (_authorized members only_ - if you're not yet part of the group, please contact us). 
-* This tutorial takes you step-by-step to:
-  
-    1. download the DREAM model code and tools needed for this workshop, 
-    2. download the Docker Desktop app and install install it,
-    3. get the  Docker image that  provides a ready-to-use environment for the DREAM model,
-    4. run your Docker container and find the model code in there. 
+
+- This tutorial takes you step-by-step to:
+
+  1. Download the DREAM model code and tools needed for this workshop  
+  2. Download the Docker Desktop app and install it  
+  3. Get the Docker image that provides a ready-to-use environment for the DREAM model  
+  4. Run your Docker container and find the model code in there  
+
  
 **Prerequisites:** 
 * You'll need to know your github identifiers
