@@ -28,7 +28,7 @@ _[These steps have to be done once for all.]_
 * 1.2 Download the model code from GitHub (follow instructions in option 1 OR option 2):
 
   <details>
-  <summary>Option A: Download from the terminal with `git clone` (click here)</summary>
+  <summary>Option A: Download from the terminal with `git clone` (click here to follow instructions)</summary>
 
   Because the DREAM code repository is private you will need to enter your GitHub ID and password when cloning.
 
@@ -46,7 +46,7 @@ _[These steps have to be done once for all.]_
   </details>
 
   <details>
-  <summary>Option B: Download by clicking on the GitHub webpage (click here)</summary>
+  <summary>Option B: Download by clicking on the GitHub webpage (click here to follow instructions)</summary>
       
     * Because the DREAM code repository is private you will need to be logged in to [https://github.com/](https://github.com/) before going to the page below and clicking download.
     * Once logged in, go to [https://github.com/dream-gcm/DREAM/tree/dev-in-Docker](https://github.com/dream-gcm/DREAM/tree/dev-in-Docker)
