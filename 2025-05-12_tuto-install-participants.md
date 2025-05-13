@@ -89,7 +89,7 @@ But first, some explanation of what this command does:
 
 *  Copy the link that printed in the terminal that looks like  http://127.0.0.1:8888/lab?token=…….  (But copy the entire link with the token with numbers)
 *  Paste this link in your favourite browser. It should open a JupyterLab window like this:
-_TODO: Insert screenshot_ ![screenshot1](./FIGSScreenshot1.png)
+_TODO: Insert screenshot_ ![screenshot1](./FIGS/Screenshot1.png)
 
 *  Click on the “Terminal” icon to open a terminal (this terminal runs in the Docker, with its associated environment). There you can start working on the model as usual, and your environnement is already ready to work with Fortran, netcdf, and all that.
 *  On the left, click on the “work” directory, then in DREAM directory, and you can see the files and subdirectories from the DREAM model code. You can open and edit those file within the JupyterLab too by clicking on them.
