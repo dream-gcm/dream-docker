@@ -7,10 +7,10 @@
 
 - This tutorial takes you step-by-step to:
 
-  1. Download the DREAM model code and tools needed for this workshop  
-  2. Download the Docker Desktop app and install it  
-  3. Get the Docker image that provides a ready-to-use environment for the DREAM model  
-  4. Run your Docker container and find the model code in there  
+  *  1. Download the DREAM model code and tools needed for this workshop  
+  *  2. Download the Docker Desktop app and install it  
+  *  3. Get the Docker image that provides a ready-to-use environment for the DREAM model
+  *  4. Run your Docker container and find the model code in there  
 
  
 **Prerequisites:** 
