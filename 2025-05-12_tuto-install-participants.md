@@ -29,7 +29,7 @@ _[These steps have to be done once for all.]_
 * 1.2 Download the model code from GitHub (follow instructions in option 1 OR option 2):
 
   <details>
-  <summary>Option 1: CLICK HERE to download from the terminal with `git clone`</summary>
+  <summary>Option A: CLICK HERE to download from the terminal with `git clone`</summary>
 
   Because the DREAM code repository is private you will need to enter your GitHub ID and password when cloning.
 
