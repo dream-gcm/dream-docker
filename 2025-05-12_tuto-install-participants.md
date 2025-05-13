@@ -84,9 +84,10 @@ _[These steps have to be done each time you want to use the DREAM model.]_
 
 * 4.1 On your local machine, open the Docker Desktop app if not already open.
 * 4.2 Then in a terminal, run the docker command below, after editing  the path `your-local-path-to-MY-DREAM-WORKSHOP/` to your own workshop directory.
-```
-docker run -it --rm -p 8888:8888 -v your-local-path-to-MY-DREAM-WORKSHOP/:/home/jovyan/work ghcr.io/dream-gcm/dreamgcm-env:latest jupyter lab --ip=0.0.0.0 --no-browser --allow-root
-```
+
+  ```
+  docker run -it --rm -p 8888:8888 -v your-local-path-to-MY-DREAM-WORKSHOP/:/home/jovyan/work ghcr.io/dream-gcm/dreamgcm-env:latest jupyter lab --ip=0.0.0.0 --no-browser --allow-root
+  ```
 You should now have some text printed in the terminal saying that a server is running.
 
 But first, some explanation of what this command does:
