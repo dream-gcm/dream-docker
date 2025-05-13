@@ -3,7 +3,7 @@
 
 **Purpose:** 
 * __This tutorial provides  instructions to install a ready-to-use environment to run the DREAM model__.
-* This environment (including fortran compiler, netcdf libraries, python  and all what you need) is provided throught a Docker container that you will run on your own machine. Note that the Docker image is in open acces but  does not contain the model code itself, that we will  download from the DREAM github (_authorized members only_ - if you're not yet pârt of the group, please contact us). 
+* This environment (including fortran compiler, netcdf libraries, python  and all what you need) is provided throught a Docker container that you will run on your own machine. Note that the Docker image is in open acces but  does not contain the model code itself, that we will  download from the DREAM github (_authorized members only_ - if you're not yet part of the group, please contact us). 
 * This tutorial takes you step-by-step to:
     1. download the DREAM model code and tools needed for this workshop, 
     2. download the Docker Desktop app and install install it,
@@ -22,7 +22,7 @@ _[These steps have to be done once for all.]_
 * Create a directory where you will work during the workshop: `mkdir MY-DREAM-WORKSHOP`
 
 
-* Download the model code from GitHub:
+* Download the model code from GitHub (follow instructions in option 1 OR option 2):
 
   <details>
   <summary>Option 1: Download from the terminal with `git clone`</summary>
@@ -88,7 +88,7 @@ You should now have some text printed in the terminal saying that a server is ru
   * **Importantly** we also link  the local directory on your machine where the DREAM code is (`your-local-path-to-MY-DREAM-WORKSHOP/`) to the virtual directory `/home/jovyan/work/` in the Docker image. Once in the Docker, you will work in `/home/jovyan/work/` but your actions will happen in `your-local-path-to-MY-DREAM-WORKSHOP/`.
   *  Copy the link that printed in the terminal that looks like  http://127.0.0.1:8888/lab?token=…….  (But copy the entire link with the token with numbers)
   *  Paste this link in your favourite browser. It should open a JupyterLab window like this:
-_TODO: Insert screenshot_ ![](Screenshot%202025-01-30%20at%2016.35.04.png)
+_TODO: Insert screenshot_ ![](Screenshot1.png)
   *  Click on the “Terminal” icon to open a terminal (this terminal runs in the Docker, with its associated environment). There you can start working on the model as usual, and your environnement is already ready to work with Fortran, netcdf, and all that.
   *  On the left, click on the “work” directory, then in DREAM directory, and you can see the files and subdirectories from the DREAM model code. You can open and edit those file within the JupyterLab too by clicking on them.
 
