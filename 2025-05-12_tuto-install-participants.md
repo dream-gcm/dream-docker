@@ -94,7 +94,9 @@ _TODO: Insert screenshot_ ![screenshot1](./FIGS/Screenshot1.png)
 *  Click on the “Terminal” icon to open a terminal (this terminal runs in the Docker, with its associated environment). There you can start working on the model as usual, and your environnement is already ready to work with Fortran, netcdf, and all that.
 *  On the left, click on the “work” directory, then in DREAM directory, and you can see the files and subdirectories from the DREAM model code. You can open and edit those file within the JupyterLab too by clicking on them.
 
+# 5. Congratulations! You're now ready to play with the DREAM model. 
+Let's move to the [next tutorial]() for a basic usage of DREAM.
 
-# 5 Close Docker 
-* when you are done with your model session, you can close the Docker app and the terminal from which you had run the Docker command.
-* next time you want to use the model, start the instructions at section 4 above.
+# 6 Close Docker 
+* When you are done with your DREAM model session, you can close the Docker app and the terminal from which you had run the Docker command.
+* Next time you want to use the model, start the instructions at section 4 above.
