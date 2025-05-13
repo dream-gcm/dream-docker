@@ -5,10 +5,11 @@
 * __This tutorial provides  instructions to install a ready-to-use environment to run the DREAM model__.
 * This environment (including fortran compiler, netcdf libraries, python  and all what you need) is provided throught a Docker container that you will run on your own machine. Note that the Docker image is in open acces but  does not contain the model code itself, that we will  download from the DREAM github (_authorized members only_ - if you're not yet part of the group, please contact us). 
 * This tutorial takes you step-by-step to:
+  
     1. download the DREAM model code and tools needed for this workshop, 
     2. download the Docker Desktop app and install install it,
-    2. get the  Docker image that  provides a ready-to-use environment for the DREAM model,
-    3. run your Docker container and find the model code in there. 
+    3. get the  Docker image that  provides a ready-to-use environment for the DREAM model,
+    4. run your Docker container and find the model code in there. 
  
 **Prerequisites:** 
 * You'll need to know your github identifiers
@@ -89,7 +90,7 @@ But first, some explanation of what this command does:
 
 *  Copy the link that printed in the terminal that looks like  http://127.0.0.1:8888/lab?token=…….  (But copy the entire link with the token with numbers)
 *  Paste this link in your favourite browser. It should open a JupyterLab window like this:
-_TODO: Insert screenshot_ ![screenshot1](./FIGS/Screenshot1.png)
+![screenshot1](./FIGS/Screenshot1.png)
 
 *  Click on the “Terminal” icon to open a terminal (this terminal runs in the Docker, with its associated environment). There you can start working on the model as usual, and your environnement is already ready to work with Fortran, netcdf, and all that.
 *  On the left, click on the “work” directory, then in DREAM directory, and you can see the files and subdirectories from the DREAM model code. You can open and edit those file within the JupyterLab too by clicking on them.
