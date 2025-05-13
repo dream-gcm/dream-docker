@@ -29,7 +29,7 @@ mkdir DREAM-WORKSHOP
 * Download the model code from GitHub:
 
   <details>
-  <summary>Option 1: Do it in the terminal with git</summary>
+  <summary>Option 1: Download from the terminal with `git clone`</summary>
 
   Because the DREAM code repository is private you will need to enter your GitHub ID and password when cloning.
 
@@ -47,12 +47,12 @@ mkdir DREAM-WORKSHOP
   </details>
 
   <details>
-  <summary>Option 2: Do it by clicking on the GitHub webpage</summary>
-      
-    * Go to [https://github.com/dream-gcm/DREAM/tree/dev-in-Docker](https://github.com/dream-gcm/DREAM/tree/dev-in-Docker) and click on the green CODE button and then 'Download zip' in the menu. 
+  <summary>Option 2: Download by clicking on the GitHub webpage</summary>
+    * Because the DREAM code repository is private you will need to be logged in to [https://github.com/](https://github.com/) before going to the page below and clicking download.
+    * Once loged in, go to [https://github.com/dream-gcm/DREAM/tree/dev-in-Docker](https://github.com/dream-gcm/DREAM/tree/dev-in-Docker)
+    * Click on the green CODE button and then 'Download zip' in the menu. 
     * Save this zip file in your workshop directory and unzip it.
-    * Because the DREAM code repository is private you will need to be logged in to GitHub before going to the page and clicking download.
-
+    
   </details>
 
 
