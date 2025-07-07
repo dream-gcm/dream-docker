@@ -25,7 +25,7 @@ _[These steps have to be done once for all.]_
 * 1.1 Create a directory where you will work during the workshop: `mkdir MY-DREAM-WORKSHOP`
 
 
-* 1.2 Download the model code from GitHub (follow instructions in option 1 OR option 2):
+* 1.2 Download the model code from GitHub (follow instructions in option A OR option B):
 
   <details>
   <summary>Option A: Download from the terminal with `git clone` (click here to follow instructions)</summary>
