@@ -36,7 +36,7 @@ _[These steps have to be done once for all.]_
     # Download the model code and plot tools in the workshop directory with git
     cd MY-DREAM-WORKSHOP
     git clone https://github.com/dream-gcm/DREAM.git
-    git clone https://github.com/dream-gcm/dream-tools.git
+    git clone https://github.com/dream-gcm/workshop-notebooks-2025.git
     
     # In the code directory, switch to the branch `dev-in-Docker` developped specifically for the workshop.
     cd DREAM
@@ -52,7 +52,9 @@ _[These steps have to be done once for all.]_
     * Once logged in, go to [https://github.com/dream-gcm/DREAM/tree/dev-in-Docker](https://github.com/dream-gcm/DREAM/tree/dev-in-Docker)
     * Click on the green CODE button and then 'Download zip' in the menu. 
     * Save this zip file in your workshop directory and unzip it.
-    
+    * Then go to [https://github.com/dream-gcm/workshop-notebooks-2025](https://github.com/dream-gcm/workshop-notebooks-2025)
+    * Click on the green CODE button and then 'Download zip' in the menu.
+    * Save this zip file in your workshop directory and unzip it.
   </details>
 
 
