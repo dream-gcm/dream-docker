@@ -19,11 +19,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Switch back to jovyan user (the default user in Jupyter images)
 USER ${NB_UID}
 
-# Install CDO and NCO from conda-forge
-RUN mamba install -y -c conda-forge cdo nco \
+# Install CDO and NCO in a separate conda environment
+RUN mamba create -y -n cdo-env -c conda-forge cdo nco \
     && mamba clean --all -f -y \
     && fix-permissions "${CONDA_DIR}" \
     && fix-permissions "/home/${NB_USER}"
+
+# Make cdo/nco available, with the base environment still taking priority
+ENV PATH="${PATH}:/opt/conda/envs/cdo-env/bin"
 
 # Install Python packages using pip
 RUN pip install --no-cache-dir \
@@ -41,4 +44,4 @@ RUN pip install --no-cache-dir \
 EXPOSE 8888
 
 # Set the default command to start JupyterLab
-CMD ["start.sh", "jupyter", "lab", "--ip=0.0.0.0", "--no-browser"]
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--no-browser"]
