@@ -11,8 +11,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libnetcdf-dev \
     libnetcdff-dev \
     netcdf-bin \
-    cdo \
-    nco \
     tcsh \
     ksh \
     vim \
